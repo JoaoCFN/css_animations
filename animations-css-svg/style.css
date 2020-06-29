@@ -1,0 +1,49 @@
+/* 
+    QUANDO O DASHARRAY É MUITO GRANDE, O EFEITO DELE VIZUALMENTE NÃO É PERCEPTÍVEL DANDO 
+    A SENSAÇÃO DE QUE O DESENHO ESTÁ IGUAL.
+
+    SE O DASHOFFSET E O DASHARRAY FOREM IGUAIS O ELEMENTO SUMIRA DA TELA.
+
+    NESTA ANIMAÇÃO, TANTO O DASHOFFSET QUANTO DASHARRAY COMEÇAM COM VALORES MUITO ALTOS
+    FAZENDO COM QUE O ELEMENTO SUMA DA TELA. QUANDO A ANIMAÇÃO VAI PARA A POSIÇÃO FINAL, O OFFSET 
+    (DESLOCAMENTO) VAI PARA 0 VOLTANDO A TER O ELEMENTO DESENHADO NA TELA.
+*/
+
+@keyframes dashAnimation{
+    from{
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        fill: transparent;
+    }
+
+    to{
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+        fill: black;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+/*** ESTILO INTERNO DO SVG ***/
+/* ST0, NESTE EXEMPLO, É UMA CLASSE GERAL PARA TODOS OS PATHS */
+.st0{
+    fill: transparent;
+    stroke:#000000;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+    /* FAZ TODAS A LINHAS FICAREM TRACEJADAS */
+    stroke-dasharray: 500;
+    /* QUANTO O LINHA VAI SER DESLOCADO DENTRO DO PATH */
+    stroke-dashoffset: 500;
+    animation: dashAnimation 5s linear forwards;
+}
