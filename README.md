@@ -1,4 +1,4 @@
-#  CSS ANIMATIONS
+#  CSS Animations
 
 ## :closed_book: Sobre 
  ### Este é um repositório de estudos
