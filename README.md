@@ -4,4 +4,4 @@
  ### Este é um repositório de estudos
 
 ## :mortar_board: Estudos
- ### Reforçando conceitos de animações CSS e SVG
+ ### Reforçando conceitos sobre animações CSS e SVG
